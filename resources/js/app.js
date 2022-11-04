@@ -72,7 +72,7 @@ dom.tasks.onclick = (event) => {
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-                const taskId = target.parentElement.parentElement.getAttribute('id');
+                const taskId = target.parentElement.getAttribute('id');
                 deleteTask(taskId)
                 Swal.fire('Удалено!', '', 'success').then((result) => {
                     if (result.isConfirmed) {
